@@ -22,7 +22,8 @@ sudo apt update && sudo apt install -y \
   python-is-python3
 
 python3 -m pip install -U \
-  youtube_dl
+  youtube_dl \
+  ffmpeg-python
 
 # Choose any path XXX
 cd /path/to/XXX
