@@ -23,7 +23,8 @@ sudo apt update && sudo apt install -y \
 
 python3 -m pip install -U \
   youtube_dl \
-  ffmpeg-python
+  ffmpeg-python \
+  essentia
 
 # Choose any path XXX
 cd /path/to/XXX
