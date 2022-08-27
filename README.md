@@ -1,41 +1,12 @@
 # sh_sfp_env
 
-## Build instructions for our select ROS2 repos
-
+Populate a local workspace:
 ```
-sudo apt update && sudo apt install -y \
-  ffmpeg \
-  autoconf \
-  autogen \
-  automake \
-  build-essential \
-  libasound2-dev \
-  libflac-dev \
-  libogg-dev \
-  libtool \
-  libvorbis-dev \
-  libopus-dev \
-  libmp3lame-dev \
-  libmpg123-dev \
-  libsfml-dev \
-  pkg-config \
-  python-is-python3
+sudo su -s /bin/bash -c "$(wget --no-cache -qO - "https://raw.githubusercontent.com/rnvandemark/sh_base_env/master/bin/sh_help_merge_standard_workspace.sh")" root '' "$USER" sfp /path/to/sh_ws
+```
 
-python3 -m pip install -U \
-  youtube_dl \
-  ffmpeg-python \
-  essentia
-
-# Choose any path XXX
-cd /path/to/XXX
-git clone https://github.com/libsndfile/libsndfile.git
-cd libsndfile
-./autogen.sh
-./configure --enable-werror
-make
-sudo make install
-
-mkdir -p /path/to/your_ws/src
-cd /path/to/your_ws
-rosinstall src /path/to/sh_sfp_env/sh_sfp.rosinstall
+Optionally, build:
+```
+cd /path/to/sh_ws
+colcon build --symlink-install
 ```
