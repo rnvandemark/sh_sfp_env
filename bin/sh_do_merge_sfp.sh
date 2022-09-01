@@ -17,6 +17,7 @@ function sh_do_pkg_install() {
         libmp3lame-dev \
         libmpg123-dev \
         libsfml-dev \
+        libncurses-dev \
         pkg-config \
         python-is-python3
 
